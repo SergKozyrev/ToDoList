@@ -1,0 +1,141 @@
+/* DEFAULT */
+
+* {
+    box-sizing: border-box;
+}
+html,
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* CUSTOM */
+body {
+    padding: 20px;
+    background: #91EAE4;
+    background: linear-gradient(to bottom, #91EAE4 0, #86A8E7 50%, #7F7FD5 100%) no-repeat;
+    line-height: 1;
+}
+
+.notes{
+    margin: 0 auto;
+    max-width: 40%;
+    box-shadow: 0 0 1em black;
+}
+.title {
+    background: #7F7FD5;
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding: 8px 20px 10px;
+    font-size: 24px;
+}
+
+.listValue {
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    background: #f7f7f7;
+    padding: 14px;
+    color: #666;
+    border: 2px solid transparent;
+}
+
+.listValue:focus {
+    background: #fff;
+    border: 2px solid #7F7FD5;
+    outline: none;
+}
+
+.addList {
+    display: flex;
+}
+
+.addValue {
+    display: block;
+    background: #fff;
+    font-size: 30px;
+    padding: 5px 17px;
+    cursor: pointer;
+    color: #27ff00;
+    border: none;
+    transition: 250ms ease-out;
+}
+
+.addValue:hover {
+    color: #fff;
+    background: #91EAE4;
+}
+
+.addValue:focus {
+    outline: none;
+}
+
+.list-item {
+    position: relative;
+    background: #fff;
+    padding: 14px 51px 14px 40px;
+    font-size: 18px;
+    color: #666;
+    word-wrap: break-word;
+    transition: 250ms ease-out;
+}
+
+.list-item:nth-child(even) {
+    background: #f7f7f7;
+}
+
+.list-item:hover {
+    cursor: pointer;
+    background: #91EAE4;
+}
+
+.list-item.checked {
+    text-decoration: line-through;
+    background: #91EAE4;
+}
+
+.list-item.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0px 2px 2px 0px;
+    top: 14px;
+    left: 18px;
+    transform: rotate(45deg);
+    height: 13px;
+    width: 6px;
+}
+.list-item.checked::after {
+    content: 'Done!';
+    position: absolute;
+    top: 8px;
+    left: 45%;
+    color: #fff;
+    font-size: 30px;
+   
+}
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #ff5050;
+    font-size: 30px;
+    padding: 8px 17px;
+    transition: 250ms ease-out;
+}
+
+.close:hover {
+    background-color: #ff5050;
+    color: white;
+}
+
