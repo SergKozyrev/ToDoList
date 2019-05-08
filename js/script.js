@@ -40,7 +40,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
     addValue.addEventListener("click", createItem);         //Вызов функции добавления при клике на кнопку
 
-    list.addEventListener("click", function (ev) {          //Делегирование обработки кливо по элементам которе еще не созданны
+    list.addEventListener("click", function (ev) {          //Делегирование обработки кликов по элементам которые еще не созданны
         if (ev.target.tagName === "LI") {
             ev.target.classList.toggle("checked");          //Клик по элементу списка
             toLocal();
